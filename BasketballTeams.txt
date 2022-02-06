@@ -1,0 +1,30 @@
+BasketballTeam
+Pheonix Suns
+52
+10
+5861
+5458
+BasketballTeam
+Golden State Warriors
+40
+13
+5880
+5442
+BasketballTeam
+Memphis Grizzlies
+37
+18
+6196
+5971
+BasketballTeam
+Utah Jazz
+32
+21
+6023
+5704
+BasketballTeam
+Dallas Mavericks
+30
+23
+5632
+5493

@@ -25,7 +25,7 @@ public class Program {
         sport = scanner.nextInt();
 
         switch(sport){
-            case 1:
+            case 1: {
                 Path inputPath = Paths.get("FootballTeams.txt");
                 List<String> lines = null;
                 try {
@@ -38,45 +38,97 @@ public class Program {
 
                 System.out.println("List of available teams:");
 
-                for(int i=0;i<lines.size();i++)
-                {
-                    if(lines.get(i).equals("FootballTeam")){
-                        String teamName = lines.get(i+1);
-                        int wins = Integer.parseInt(lines.get(i+2));
-                        int draws = Integer.parseInt(lines.get(i+3));
-                        int losses = Integer.parseInt(lines.get(i+4));
-                        int goalsScored = Integer.parseInt(lines.get(i+5));
-                        int goalsLost = Integer.parseInt(lines.get(i+6));
+                for (int i = 0; i < lines.size(); i++) {
+                    if (lines.get(i).equals("FootballTeam")) {
+                        String teamName = lines.get(i + 1);
+                        int wins = Integer.parseInt(lines.get(i + 2));
+                        int draws = Integer.parseInt(lines.get(i + 3));
+                        int losses = Integer.parseInt(lines.get(i + 4));
+                        int goalsScored = Integer.parseInt(lines.get(i + 5));
+                        int goalsLost = Integer.parseInt(lines.get(i + 6));
 
-                        Football team= new Football(teamName,wins,draws,losses,goalsScored,goalsLost);
+                        Football team = new Football(teamName, wins, draws, losses, goalsScored, goalsLost);
 
                         teams.add(team);
-                        if(i==0)
-                            System.out.println(i+" - "+teamName);
+                        if (i == 0)
+                            System.out.println(i + " - " + teamName);
                         else
-                            System.out.println(i/7+" - "+teamName);
+                            System.out.println(i / 7 + " - " + teamName);
                     }
                 }
-                System.out.println("Choose team 1:");
-                int team1;
+                System.out.print("Choose team 1: ");
+                int team1, team2, stars1, stars2;
+                String teamName1, teamName2;
                 team1 = scanner.nextInt();
                 teams.get(team1).showStatistics();
-                System.out.println("Choose team 2:");
-                int team2;
+                System.out.print("Choose team 2: ");
                 team2 = scanner.nextInt();
                 teams.get(team2).showStatistics();
-
-                int stars1,stars2;
                 stars1 = teams.get(team1).stars();
                 stars2 = teams.get(team2).stars();
-
-                String teamName1;
-                String teamName2;
                 teamName1 = teams.get(team1).showTeamName();
                 teamName2 = teams.get(team2).showTeamName();
+                Football.result(teamName1, stars1, teamName2, stars2);
+                break;
+            }
+            case 2:{
+                Path inputPath = Paths.get("BasketballTeams.txt");
+                List<String> lines = null;
+                try {
+                    lines = Files.readAllLines(inputPath, Charset.forName("UTF-8"));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
 
-                Football.result(teamName1,stars1,teamName2,stars2);
+                List<Basketball> teams = new ArrayList<>();
 
+                System.out.println("List of available teams:");
+
+                for (int i = 0; i < lines.size(); i++) {
+                    if (lines.get(i).equals("BasketballTeam")) {
+                        String teamName = lines.get(i + 1);
+                        int wins = Integer.parseInt(lines.get(i + 2));
+                        int losses = Integer.parseInt(lines.get(i + 3));
+                        int pointsScored = Integer.parseInt(lines.get(i + 4));
+                        int pointsConceded = Integer.parseInt(lines.get(i + 5));
+
+                        Basketball team = new Basketball(teamName, wins, losses, pointsScored, pointsConceded);
+
+                        teams.add(team);
+                        if (i == 0)
+                            System.out.println(i + " - " + teamName);
+                        else
+                            System.out.println(i / 6 + " - " + teamName);
+                    }
+                }
+                System.out.print("Choose team 1: ");
+                int team1, team2;
+                double stars1, stars2;
+                String teamName1, teamName2;
+                team1 = scanner.nextInt();
+                teams.get(team1).showStatistics();
+                System.out.print("Choose team 2: ");
+                team2 = scanner.nextInt();
+                teams.get(team2).showStatistics();
+                stars1 = teams.get(team1).stars();
+                stars2 = teams.get(team2).stars();
+                teamName1 = teams.get(team1).showTeamName();
+                teamName2 = teams.get(team2).showTeamName();
+                Basketball.result(teamName1, stars1, teamName2, stars2);
+                break;
+            }
+            case 3:{
+
+            }
+            case 4:{
+
+            }
+            case 5:{
+
+            }
+            default:{
+
+            }
         }
     }
 }

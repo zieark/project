@@ -1,23 +1,21 @@
 package com.company;
 
-public class Football {
+public class Basketball {
     private String teamName;
     private int wins;
-    private int draws;
     private int losses;
-    private int goalsScored;
-    private int goalsLost;
+    private int pointsScored;
+    private int pointsConceded;
 
-    public Football(String teamName, int wins, int draws, int losses, int goalsScored, int goalsLost) {
+    public Basketball(String teamName, int wins, int losses, int pointsScored, int pointsConceded) {
         this.teamName = teamName;
         this.wins = wins;
-        this.draws = draws;
         this.losses = losses;
-        this.goalsScored = goalsScored;
-        this.goalsLost = goalsLost;
+        this.pointsScored = pointsScored;
+        this.pointsConceded = pointsConceded;
     }
 
-    public static void result(String teamName1, int stars1, String teamName2, int stars2) {
+    public static void result(String teamName1, double stars1, String teamName2, double stars2) {
         if(stars1>stars2)
             System.out.println("The game between "+teamName1+" and "+teamName2+" should be won by "+teamName1);
         else if (stars2>stars1)
@@ -32,27 +30,27 @@ public class Football {
         return "Football{" +
                 "teamName='" + teamName + '\'' +
                 ", wins=" + wins +
-                ", draws=" + draws +
                 ", losses=" + losses +
-                ", goalsScored=" + goalsScored +
-                ", goalsLost=" + goalsLost +
+                ", goalsScored=" + pointsScored +
+                ", goalsLost=" + pointsConceded +
                 '}';
     }
 
     public void showStatistics() {
-        int stars = (this.wins*3)+this.draws;
-        int maxStars = (this.wins+this.draws+this.losses)*3;
-        System.out.println("You chose "+this.teamName+" which won "+this.wins+" games, " +
-                "draw "+this.draws+" games and lost "+this.losses+" games. They scored "+this.goalsScored+
-                " goals and conceded "+this.goalsLost+".");
+        int stars = this.wins*2-this.losses;
+        int maxStars = (this.wins+this.losses)*2;
+        System.out.println("You chose "+this.teamName+" which won "+this.wins+" games and lost "
+                +this.losses+" games. They scored "+this.pointsScored+
+                " points and conceded "+this.pointsConceded+".");
         System.out.println("In our rating they have "+stars+"/"+maxStars+" stars");
         System.out.println(" ");
     }
 
-    public int stars() {
-        int stars = (this.wins*3)+this.draws;
-        int maxStars = (this.wins+this.draws+this.losses)*3;
-        return stars;
+    public double stars() {
+        double stars = this.wins*2-this.losses;
+        double maxStars = (this.wins+this.losses)*2;
+        double starsFactor = stars/maxStars;
+        return starsFactor;
     }
 
     public String showTeamName() {
