@@ -1,0 +1,35 @@
+FootballTeam
+Legia Warszawa
+7
+3
+0
+25
+3
+FootballTeam
+Lech Poznań
+6
+2
+2
+12
+7
+FootballTeam
+Wisła Kraków
+5
+3
+2
+12
+8
+FootballTeam
+Raków Częstochowa
+0
+2
+8
+6
+16
+FootballTeam
+Zagłębie Lubin
+2
+4
+4
+10
+10
