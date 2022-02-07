@@ -1,0 +1,45 @@
+VolleyballTeam
+Kędzierzyn-Koźle
+16
+0
+2
+0
+46
+48
+8
+VolleyballTeam
+Jastrzębski Węgiel
+14
+3
+2
+3
+43
+46
+14
+VolleyballTeam
+Skra Bełchatów
+13
+5
+3
+4
+40
+48
+27
+VolleyballTeam
+Aluron CMC Warta
+14
+5
+7
+2
+37
+43
+30
+VolleyballTeam
+Projekt Warszawa
+10
+7
+5
+4
+29
+36
+32
