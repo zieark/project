@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="332b1ca3-2cf0-45d2-b633-c151eaf9e3b2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projekt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/projekt.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Basketball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Basketball.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Football.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Football.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/SkiJumping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SkiJumping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Tennis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Tennis.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Volleyball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Volleyball.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -92,6 +97,8 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -104,8 +111,14 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ARZEt\Desktop\projekt\src" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.company" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Program">
+  <component name="RunManager" selected="JUnit.SkiJumpingTest.result">
     <configuration name="Exercise1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Exercise1" />
       <module name="projekt" />
@@ -158,8 +171,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WriteJSONExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.WriteJSONExample" />
+    <configuration name="SkiJumpingTest.result" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="projekt" />
       <extension name="coverage">
         <pattern>
@@ -167,17 +179,21 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.company" />
+      <option name="MAIN_CLASS_NAME" value="com.company.SkiJumpingTest" />
+      <option name="METHOD_NAME" value="result" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SkiJumpingTest.result" />
         <item itemvalue="Application.Program" />
         <item itemvalue="Application.Odczyt" />
         <item itemvalue="Application.Exercise1" />
         <item itemvalue="Application.LaZabawa" />
-        <item itemvalue="Application.WriteJSONExample" />
       </list>
     </recent_temporary>
   </component>

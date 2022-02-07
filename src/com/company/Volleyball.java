@@ -1,5 +1,8 @@
 package com.company;
 
+/**
+ * Klasa dla siatkowki
+ */
 public class Volleyball {
     private String teamName;
     private int wins;
@@ -10,6 +13,16 @@ public class Volleyball {
     private int setsWon;
     private int setsLosses;
 
+    /**
+     * @param teamName - nazwa druzyny
+     * @param wins - ilosc wygranych
+     * @param losses - ilosc porazek
+     * @param winsIn5Sets - ilosc wygranych w 5 setach
+     * @param lossesIn5Sets - ilosc porazek w 5 setach
+     * @param points - ilosc punktow
+     * @param setsWon - ilosc wygranych setow
+     * @param setsLosses - ilosc przegranych setow
+     */
     public Volleyball(String teamName, int wins, int losses, int winsIn5Sets, int lossesIn5Sets, int points, int setsWon, int setsLosses) {
         this.teamName = teamName;
         this.wins = wins;
@@ -21,6 +34,12 @@ public class Volleyball {
         this.setsLosses = setsLosses;
     }
 
+    /**
+     * @param teamName1 - nazwa pierwszej pobieranej druzyny
+     * @param stars1 - ilosc gwiazdek pierwszej pobieranej druzyny
+     * @param teamName2 - nazwa drugiej pobieranej druzyny
+     * @param stars2 - ilosc gwiazdek drugiej pobieranej druzyny
+     */
     public static void result(String teamName1, double stars1, String teamName2, double stars2) {
         if(stars1>stars2)
             System.out.println("The game between "+teamName1+" and "+teamName2+" should be won by "+teamName1);
@@ -30,6 +49,9 @@ public class Volleyball {
             System.out.println("The game between "+teamName1+" and "+teamName2+" should be won by luckily team :)");
     }
 
+    /**
+     * wyswietlanie statystyk odnosnie wybranego zespolu
+     */
     public void showStatistics() {
         int stars = this.wins*5-this.winsIn5Sets*2+this.lossesIn5Sets;
         int maxStars = (this.wins+this.losses)*5;
@@ -40,6 +62,9 @@ public class Volleyball {
         System.out.println(" ");
     }
 
+    /**
+     * @return wspolczynnik gwiazdek do wybrania lepszej druzyny
+     */
     public double stars() {
         double stars = this.wins*5-this.winsIn5Sets*2+this.lossesIn5Sets;
         double maxStars = (this.wins+this.losses)*5;
@@ -47,6 +72,9 @@ public class Volleyball {
         return starsFactor;
     }
 
+    /**
+     * @return zwraca nazwe zespolu
+     */
     public String showTeamName() {
         return this.teamName;
     }

@@ -1,5 +1,8 @@
 package com.company;
 
+/**
+ * klasa dla pilki noznej
+ */
 public class Football {
     private String teamName;
     private int wins;
@@ -8,6 +11,14 @@ public class Football {
     private int goalsScored;
     private int goalsLost;
 
+    /**
+     * @param teamName - nazwa druzyny
+     * @param wins - ilosc wygranych
+     * @param draws - ilosc remisow
+     * @param losses - ilosc porazek
+     * @param goalsScored - ilosc strzelonych bramek
+     * @param goalsLost - ilosc straconych bramek
+     */
     public Football(String teamName, int wins, int draws, int losses, int goalsScored, int goalsLost) {
         this.teamName = teamName;
         this.wins = wins;
@@ -17,6 +28,12 @@ public class Football {
         this.goalsLost = goalsLost;
     }
 
+    /**
+     * @param teamName1 - nazwa pierwszej pobieranej druzyny
+     * @param stars1 - ilosc gwiazdek pierwszej pobieranej druzyny
+     * @param teamName2 - nazwa drugiej pobieranej druzyny
+     * @param stars2 - ilosc gwiazdek drugiej pobieranej druzyny
+     */
     public static void result(String teamName1, int stars1, String teamName2, int stars2) {
         if(stars1>stars2)
             System.out.println("The game between "+teamName1+" and "+teamName2+" should be won by "+teamName1);
@@ -26,6 +43,9 @@ public class Football {
             System.out.println("The game between "+teamName1+" and "+teamName2+" should be finished by draw");
     }
 
+    /**
+     * wyswietlanie statystyk odnosnie wybranego zespolu
+     */
     public void showStatistics() {
         int stars = (this.wins*3)+this.draws;
         int maxStars = (this.wins+this.draws+this.losses)*3;
@@ -36,12 +56,18 @@ public class Football {
         System.out.println(" ");
     }
 
+    /**
+     * @return gwiazdki do wybrania lepszej druzyny
+     */
     public int stars() {
         int stars = (this.wins*3)+this.draws;
         int maxStars = (this.wins+this.draws+this.losses)*3;
         return stars;
     }
 
+    /**
+     * @return zwraca nazwe zespolu
+     */
     public String showTeamName() {
         return this.teamName;
     }

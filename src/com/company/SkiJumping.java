@@ -1,5 +1,9 @@
 package com.company;
 
+/**
+ * klasa dla skokow narciarskich
+ */
+
 public class SkiJumping {
     private String jumperName;
     private int lastPlace;
@@ -8,6 +12,14 @@ public class SkiJumping {
     private int lastPlace4;
     private int lastPlace5;
 
+    /**
+     * @param jumperName - nazwa skoczka
+     * @param lastPlace - miejsce w ostatnich zawodach
+     * @param lastPlace2 - miejsce w przedostatnich zawodach
+     * @param lastPlace3 - miejsce w zawodach 3 tygodnie temu
+     * @param lastPlace4 - miejsce w zawodach 4 tygodnie temu
+     * @param lastPlace5 - miejsce w zawodach 5 tygodni temu
+     */
     public SkiJumping(String jumperName, int lastPlace, int lastPlace2, int lastPlace3, int lastPlace4, int lastPlace5) {
         this.jumperName = jumperName;
         this.lastPlace = lastPlace;
@@ -17,6 +29,12 @@ public class SkiJumping {
         this.lastPlace5 = lastPlace5;
     }
 
+    /**
+     * @param jumperName1 - nazwa pierwszej pobieranej druzyny
+     * @param stars1 - ilosc gwiazdek pierwszej pobieranej druzyny
+     * @param jumperName2 - nazwa drugiej pobieranej druzyny
+     * @param stars2 - ilosc gwiazdek drugiej pobieranej druzyny
+     */
     public static void result(String jumperName1, double stars1, String jumperName2, double stars2) {
         if(stars1>stars2)
             System.out.println("In competition between "+jumperName1+" and "+jumperName2+" higher should be "+jumperName1);
@@ -26,6 +44,9 @@ public class SkiJumping {
             System.out.println("In competition between "+jumperName1+" and "+jumperName2+" should be won by luckily jumper :)");
     }
 
+    /**
+     * wyswietlanie statystyk odnosnie wybranego zawodnika
+     */
     public void showStatistics() {
         int stars = 250-this.lastPlace-this.lastPlace2-this.lastPlace3-this.lastPlace4-this.lastPlace5;
         int maxStars = 250;
@@ -34,6 +55,9 @@ public class SkiJumping {
         System.out.println(" ");
     }
 
+    /**
+     * @return wspolczynnik gwiazdek do wybrania lepszego zawodnika
+     */
     public double stars() {
         double stars = 250-this.lastPlace-this.lastPlace2-this.lastPlace3-this.lastPlace4-this.lastPlace5;
         double maxStars = 250;
@@ -41,6 +65,9 @@ public class SkiJumping {
         return starsFactor;
     }
 
+    /**
+     * @return zwraca nazwe zawodnika
+     */
     public String showJumperName() {
         return this.jumperName;
     }

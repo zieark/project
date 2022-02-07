@@ -9,7 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Program glowny do przewidywania zwyciescy
+ */
 public class Program {
+    /**
+     * @param args program glowny
+     */
     public static void main(String[] args)  {
         int sport;
         System.out.println("Sports:");
@@ -263,7 +269,7 @@ public class Program {
 
             }
             default:{
-
+                System.out.println("Brak takiego sportu");
             }
         }
     }

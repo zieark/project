@@ -1,5 +1,8 @@
 package com.company;
 
+/**
+ * klasa dla koszykowki
+ */
 public class Basketball {
     private String teamName;
     private int wins;
@@ -7,6 +10,13 @@ public class Basketball {
     private int pointsScored;
     private int pointsConceded;
 
+    /**
+     * @param teamName - nazwa druzyny
+     * @param wins - ilosc wygranych
+     * @param losses - ilosc przegranych
+     * @param pointsScored - ilosc zdobytych punktów
+     * @param pointsConceded - ilosc straconych punktów
+     */
     public Basketball(String teamName, int wins, int losses, int pointsScored, int pointsConceded) {
         this.teamName = teamName;
         this.wins = wins;
@@ -15,6 +25,12 @@ public class Basketball {
         this.pointsConceded = pointsConceded;
     }
 
+    /**
+     * @param teamName1 - nazwa pierwszej pobieranej druzyny
+     * @param stars1 - ilosc gwiazdek pierwszej pobieranej druzyny
+     * @param teamName2 - nazwa drugiej pobieranej druzyny
+     * @param stars2 - ilosc gwiazdek drugiej pobieranej druzyny
+     */
     public static void result(String teamName1, double stars1, String teamName2, double stars2) {
         if(stars1>stars2)
             System.out.println("The game between "+teamName1+" and "+teamName2+" should be won by "+teamName1);
@@ -24,6 +40,9 @@ public class Basketball {
             System.out.println("The game between "+teamName1+" and "+teamName2+" should be won by luckily team :)");
     }
 
+    /**
+     * wyswietlanie statystyk odnosnie wybranego zespolu
+     */
     public void showStatistics() {
         int stars = this.wins*2-this.losses;
         int maxStars = (this.wins+this.losses)*2;
@@ -34,6 +53,9 @@ public class Basketball {
         System.out.println(" ");
     }
 
+    /**
+     * @return wspolczynnik gwiazdek do wybrania lepszej druzyny
+     */
     public double stars() {
         double stars = this.wins*2-this.losses;
         double maxStars = (this.wins+this.losses)*2;
@@ -41,6 +63,9 @@ public class Basketball {
         return starsFactor;
     }
 
+    /**
+     * @return zwraca nazwe zespolu
+     */
     public String showTeamName() {
         return this.teamName;
     }
