@@ -13,7 +13,7 @@ public class SkiJumpingTest {
 
     @Test
     public void showStatistics() {
-        
+
     }
 
     @Test
