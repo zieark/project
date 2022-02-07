@@ -167,9 +167,99 @@ public class Program {
                 break;
             }
             case 4:{
+                Path inputPath = Paths.get("TennisPlayers.txt");
+                List<String> lines = null;
+                try {
+                    lines = Files.readAllLines(inputPath, Charset.forName("UTF-8"));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                List<Tennis> players = new ArrayList<>();
+
+                System.out.println("List of available players:");
+
+                for (int i = 0; i < lines.size(); i++) {
+                    if (lines.get(i).equals("TennisPlayer")) {
+                        String playerName = lines.get(i + 1);
+                        int wins = Integer.parseInt(lines.get(i + 2));
+                        int tournamentWon = Integer.parseInt(lines.get(i + 3));
+                        int losses = Integer.parseInt(lines.get(i + 4));
+
+                        Tennis player = new Tennis(playerName, wins, tournamentWon, losses);
+
+                        players.add(player);
+                        if (i == 0)
+                            System.out.println(i + " - " + playerName);
+                        else
+                            System.out.println(i / 5 + " - " + playerName);
+                    }
+                }
+                System.out.print("Choose first player: ");
+                int player1, player2;
+                double stars1, stars2;
+                String playerName1, playerName2;
+                player1 = scanner.nextInt();
+                players.get(player1).showStatistics();
+                System.out.print("Choose second player: ");
+                player2 = scanner.nextInt();
+                players.get(player2).showStatistics();
+                stars1 = players.get(player1).stars();
+                stars2 = players.get(player2).stars();
+                playerName1 = players.get(player1).showPlayerName();
+                playerName2 = players.get(player2).showPlayerName();
+                Tennis.result(playerName1, stars1, playerName2, stars2);
+                break;
 
             }
             case 5:{
+
+                Path inputPath = Paths.get("SkiJumpers.txt");
+                List<String> lines = null;
+                try {
+                    lines = Files.readAllLines(inputPath, Charset.forName("UTF-8"));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                List<SkiJumping> jumpers = new ArrayList<>();
+
+                System.out.println("List of available jumpers:");
+
+                for (int i = 0; i < lines.size(); i++) {
+                    if (lines.get(i).equals("SkiJumper")) {
+                        String jumperName = lines.get(i + 1);
+                        int lastPlace = Integer.parseInt(lines.get(i+2));
+                        int lastPlace2 = Integer.parseInt(lines.get(i+3));
+                        int lastPlace3 = Integer.parseInt(lines.get(i+4));
+                        int lastPlace4 = Integer.parseInt(lines.get(i+5));
+                        int lastPlace5 = Integer.parseInt(lines.get(i+6));
+
+                        SkiJumping jumper = new SkiJumping(jumperName,lastPlace,lastPlace2,lastPlace3,lastPlace4,lastPlace5);
+
+                        jumpers.add(jumper);
+                        if (i == 0)
+                            System.out.println(i + " - " + jumperName);
+                        else
+                            System.out.println(i / 7 + " - " + jumperName);
+                    }
+                }
+                System.out.print("Choose first jumper: ");
+                int jumper1, jumper2;
+                double stars1, stars2;
+                String jumperName1, jumperName2;
+                jumper1 = scanner.nextInt();
+                jumpers.get(jumper1).showStatistics();
+                System.out.print("Choose second jumper: ");
+                jumper2 = scanner.nextInt();
+                jumpers.get(jumper2).showStatistics();
+                stars1 = jumpers.get(jumper1).stars();
+                stars2 = jumpers.get(jumper2).stars();
+                jumperName1 = jumpers.get(jumper1).showJumperName();
+                jumperName2 = jumpers.get(jumper2).showJumperName();
+                SkiJumping.result(jumperName1, stars1, jumperName2, stars2);
+                break;
+
 
             }
             default:{

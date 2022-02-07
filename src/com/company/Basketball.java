@@ -21,19 +21,7 @@ public class Basketball {
         else if (stars2>stars1)
             System.out.println("The game between "+teamName1+" and "+teamName2+" should be won by "+teamName2);
         else
-            System.out.println("The game between "+teamName1+" and "+teamName2+" should be finished by draw");
-    }
-
-
-    @Override
-    public String toString() {
-        return "Football{" +
-                "teamName='" + teamName + '\'' +
-                ", wins=" + wins +
-                ", losses=" + losses +
-                ", goalsScored=" + pointsScored +
-                ", goalsLost=" + pointsConceded +
-                '}';
+            System.out.println("The game between "+teamName1+" and "+teamName2+" should be won by luckily team :)");
     }
 
     public void showStatistics() {

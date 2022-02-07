@@ -1,0 +1,30 @@
+TennisPlayer
+Ashleigh Barty
+25
+2
+3
+TennisPlayer
+Aryna Sabalenka
+23
+2
+3
+TennisPlayer
+Barbora Krejcikova
+22
+0
+5
+TennisPlayer
+Karolina Pliskova
+20
+1
+4
+TennisPlayer
+Iga Świątek
+18
+0
+5
+TennisPlayer
+Paula Badosa
+19
+0
+5

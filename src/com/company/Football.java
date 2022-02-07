@@ -26,19 +26,6 @@ public class Football {
             System.out.println("The game between "+teamName1+" and "+teamName2+" should be finished by draw");
     }
 
-
-    @Override
-    public String toString() {
-        return "Football{" +
-                "teamName='" + teamName + '\'' +
-                ", wins=" + wins +
-                ", draws=" + draws +
-                ", losses=" + losses +
-                ", goalsScored=" + goalsScored +
-                ", goalsLost=" + goalsLost +
-                '}';
-    }
-
     public void showStatistics() {
         int stars = (this.wins*3)+this.draws;
         int maxStars = (this.wins+this.draws+this.losses)*3;

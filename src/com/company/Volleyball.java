@@ -27,21 +27,7 @@ public class Volleyball {
         else if (stars2>stars1)
             System.out.println("The game between "+teamName1+" and "+teamName2+" should be won by "+teamName2);
         else
-            System.out.println("The game between "+teamName1+" and "+teamName2+" should be finished by draw");
-    }
-
-    @Override
-    public String toString() {
-        return "Volleyball{" +
-                "teamName='" + teamName + '\'' +
-                ", wins=" + wins +
-                ", losses=" + losses +
-                ", winsIn5Sets=" + winsIn5Sets +
-                ", lossesIn5Sets=" + lossesIn5Sets +
-                ", points=" + points +
-                ", setsWon=" + setsWon +
-                ", setsLosses=" + setsLosses +
-                '}';
+            System.out.println("The game between "+teamName1+" and "+teamName2+" should be won by luckily team :)");
     }
 
     public void showStatistics() {
