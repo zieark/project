@@ -31,7 +31,7 @@ public class Basketball {
      * @param teamName2 - nazwa drugiej pobieranej druzyny
      * @param stars2 - ilosc gwiazdek drugiej pobieranej druzyny
      */
-    public static void result(String teamName1, double stars1, String teamName2, double stars2) {
+    public static void basketballResult(String teamName1, double stars1, String teamName2, double stars2) {
         if(stars1>stars2)
             System.out.println("The game between "+teamName1+" and "+teamName2+" should be won by "+teamName1);
         else if (stars2>stars1)
@@ -43,9 +43,9 @@ public class Basketball {
     /**
      * wyswietlanie statystyk odnosnie wybranego zespolu
      */
-    public void showStatistics() {
-        int stars = this.wins*2-this.losses;
-        int maxStars = (this.wins+this.losses)*2;
+    public void showBasketballStatistics() {
+        double stars = this.wins*2-this.losses;
+        double maxStars = (this.wins+this.losses)*2;
         System.out.println("You chose "+this.teamName+" which won "+this.wins+" games and lost "
                 +this.losses+" games. They scored "+this.pointsScored+
                 " points and conceded "+this.pointsConceded+".");
@@ -56,7 +56,7 @@ public class Basketball {
     /**
      * @return wspolczynnik gwiazdek do wybrania lepszej druzyny
      */
-    public double stars() {
+    public double basketballStars() {
         double stars = this.wins*2-this.losses;
         double maxStars = (this.wins+this.losses)*2;
         double starsFactor = stars/maxStars;
@@ -66,7 +66,7 @@ public class Basketball {
     /**
      * @return zwraca nazwe zespolu
      */
-    public String showTeamName() {
+    public String showBasketballTeamName() {
         return this.teamName;
     }
 }

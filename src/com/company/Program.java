@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class Program {
     /**
-     * @param args program glowny
+     * @param args
      */
     public static void main(String[] args)  {
             int sport;
@@ -65,10 +65,11 @@ public class Program {
                         }
                     }
                     System.out.print("Choose team 1: ");
-                    int team1, team2, stars1, stars2;
+                    int team1, team2;
+                    double stars1, stars2;
                     String teamName1, teamName2;
                     team1 = scanner.nextInt();
-                    teams.get(team1).showStatistics();
+                    teams.get(team1).showFootballStatistics();
                     do{
                         System.out.print("Choose team 2: ");
                         team2 = scanner.nextInt();
@@ -76,12 +77,12 @@ public class Program {
                             System.out.println("Team cannot play with yourself.");
                     }
                     while(team1==team2);
-                    teams.get(team2).showStatistics();
-                    stars1 = teams.get(team1).stars();
-                    stars2 = teams.get(team2).stars();
-                    teamName1 = teams.get(team1).showTeamName();
-                    teamName2 = teams.get(team2).showTeamName();
-                    Football.result(teamName1, stars1, teamName2, stars2);
+                    teams.get(team2).showFootballStatistics();
+                    stars1 = teams.get(team1).footballStars();
+                    stars2 = teams.get(team2).footballStars();
+                    teamName1 = teams.get(team1).showFootballTeamName();
+                    teamName2 = teams.get(team2).showFootballTeamName();
+                    Football.footballResult(teamName1, stars1, teamName2, stars2);
                     break;
                 }
                 case 2: {
@@ -119,7 +120,7 @@ public class Program {
                     double stars1, stars2;
                     String teamName1, teamName2;
                     team1 = scanner.nextInt();
-                    teams.get(team1).showStatistics();
+                    teams.get(team1).showBasketballStatistics();
                     do{
                         System.out.print("Choose team 2: ");
                         team2 = scanner.nextInt();
@@ -127,12 +128,12 @@ public class Program {
                             System.out.println("Team cannot play with yourself.");
                     }
                     while(team1==team2);
-                    teams.get(team2).showStatistics();
-                    stars1 = teams.get(team1).stars();
-                    stars2 = teams.get(team2).stars();
-                    teamName1 = teams.get(team1).showTeamName();
-                    teamName2 = teams.get(team2).showTeamName();
-                    Basketball.result(teamName1, stars1, teamName2, stars2);
+                    teams.get(team2).showBasketballStatistics();
+                    stars1 = teams.get(team1).basketballStars();
+                    stars2 = teams.get(team2).basketballStars();
+                    teamName1 = teams.get(team1).showBasketballTeamName();
+                    teamName2 = teams.get(team2).showBasketballTeamName();
+                    Basketball.basketballResult(teamName1, stars1, teamName2, stars2);
                     break;
                 }
                 case 3: {
@@ -173,7 +174,7 @@ public class Program {
                     double stars1, stars2;
                     String teamName1, teamName2;
                     team1 = scanner.nextInt();
-                    teams.get(team1).showStatistics();
+                    teams.get(team1).showVolleyballStatistics();
                     do{
                         System.out.print("Choose team 2: ");
                         team2 = scanner.nextInt();
@@ -181,12 +182,12 @@ public class Program {
                             System.out.println("Team cannot play with yourself.");
                     }
                     while(team1==team2);
-                    teams.get(team2).showStatistics();
-                    stars1 = teams.get(team1).stars();
-                    stars2 = teams.get(team2).stars();
-                    teamName1 = teams.get(team1).showTeamName();
-                    teamName2 = teams.get(team2).showTeamName();
-                    Volleyball.result(teamName1, stars1, teamName2, stars2);
+                    teams.get(team2).showVolleyballStatistics();
+                    stars1 = teams.get(team1).volleyballStars();
+                    stars2 = teams.get(team2).volleyballStars();
+                    teamName1 = teams.get(team1).showVolleyballTeamName();
+                    teamName2 = teams.get(team2).showVolleyballTeamName();
+                    Volleyball.volleyballResult(teamName1, stars1, teamName2, stars2);
                     break;
                 }
                 case 4: {
@@ -223,7 +224,7 @@ public class Program {
                     double stars1, stars2;
                     String playerName1, playerName2;
                     player1 = scanner.nextInt();
-                    players.get(player1).showStatistics();
+                    players.get(player1).showTennisStatistics();
                     do{
                         System.out.print("Choose second player: ");
                         player2 = scanner.nextInt();
@@ -231,12 +232,12 @@ public class Program {
                             System.out.println("Player cannot play with yourself.");
                     }
                     while(player1==player2);
-                    players.get(player2).showStatistics();
-                    stars1 = players.get(player1).stars();
-                    stars2 = players.get(player2).stars();
-                    playerName1 = players.get(player1).showPlayerName();
-                    playerName2 = players.get(player2).showPlayerName();
-                    Tennis.result(playerName1, stars1, playerName2, stars2);
+                    players.get(player2).showTennisStatistics();
+                    stars1 = players.get(player1).tennisStars();
+                    stars2 = players.get(player2).tennisStars();
+                    playerName1 = players.get(player1).showTennisPlayerName();
+                    playerName2 = players.get(player2).showTennisPlayerName();
+                    Tennis.tennisResult(playerName1, stars1, playerName2, stars2);
                     break;
 
                 }
@@ -277,7 +278,7 @@ public class Program {
                     double stars1, stars2;
                     String jumperName1, jumperName2;
                     jumper1 = scanner.nextInt();
-                    jumpers.get(jumper1).showStatistics();
+                    jumpers.get(jumper1).showSkiJumpingStatistics();
                     do{
                         System.out.print("Choose second jumper: ");
                         jumper2 = scanner.nextInt();
@@ -285,12 +286,12 @@ public class Program {
                             System.out.println("Jumper cannot fight with yourself.");
                     }
                     while(jumper1==jumper2);
-                    jumpers.get(jumper2).showStatistics();
-                    stars1 = jumpers.get(jumper1).stars();
-                    stars2 = jumpers.get(jumper2).stars();
+                    jumpers.get(jumper2).showSkiJumpingStatistics();
+                    stars1 = jumpers.get(jumper1).skiJumpingStars();
+                    stars2 = jumpers.get(jumper2).skiJumpingStars();
                     jumperName1 = jumpers.get(jumper1).showJumperName();
                     jumperName2 = jumpers.get(jumper2).showJumperName();
-                    SkiJumping.result(jumperName1, stars1, jumperName2, stars2);
+                    SkiJumping.skiJumpingResult(jumperName1, stars1, jumperName2, stars2);
                     break;
 
 

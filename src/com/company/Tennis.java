@@ -29,7 +29,7 @@ public class Tennis {
      * @param playerName2 - nazwa drugiej pobieranej druzyny
      * @param stars2 - ilosc gwiazdek drugiej pobieranej druzyny
      */
-    public static void result(String playerName1, double stars1, String playerName2, double stars2) {
+    public static void tennisResult(String playerName1, double stars1, String playerName2, double stars2) {
         if(stars1>stars2)
             System.out.println("The game between "+playerName1+" and "+playerName2+" should be won by "+playerName1);
         else if (stars2>stars1)
@@ -41,9 +41,9 @@ public class Tennis {
     /**
      * wyswietlanie statystyk odnosnie wybranego zawodnika
      */
-    public void showStatistics() {
-        int stars = this.wins*5-this.losses*3+this.tournamentWon*50;
-        int maxStars = (this.losses+this.tournamentWon)*50;
+    public void showTennisStatistics() {
+        double stars = this.wins*5-this.losses*3+this.tournamentWon*50;
+        double maxStars = (this.losses+this.tournamentWon)*50;
         System.out.println("You chose "+this.playerName+" which won "+this.wins+" games and lost "
                 +this.losses+" games. He/She won also "+this.tournamentWon+" tournaments.");
         System.out.println("In our rating he/she have "+stars+"/"+maxStars+" stars");
@@ -53,7 +53,7 @@ public class Tennis {
     /**
      * @return wspolczynnik gwiazdek do wybrania lepszego zawodnika
      */
-    public double stars() {
+    public double tennisStars() {
         double stars = this.wins*5-this.losses*3+this.tournamentWon*50;
         double maxStars = (this.losses+this.tournamentWon)*50;
         double starsFactor = stars/maxStars;
@@ -63,7 +63,7 @@ public class Tennis {
     /**
      * @return zwraca nazwe zawodnika
      */
-    public String showPlayerName() {
+    public String showTennisPlayerName() {
         return this.playerName;
     }
 }

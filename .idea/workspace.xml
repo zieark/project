@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="332b1ca3-2cf0-45d2-b633-c151eaf9e3b2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Basketball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Basketball.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Football.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Football.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/com/company/SkiJumpingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/company/SkiJumpingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/SkiJumping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/SkiJumping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Tennis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Tennis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Volleyball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Volleyball.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

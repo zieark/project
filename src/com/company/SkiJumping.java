@@ -35,7 +35,7 @@ public class SkiJumping {
      * @param jumperName2 - nazwa drugiej pobieranej druzyny
      * @param stars2 - ilosc gwiazdek drugiej pobieranej druzyny
      */
-    public static void result(String jumperName1, double stars1, String jumperName2, double stars2) {
+    public static void skiJumpingResult(String jumperName1, double stars1, String jumperName2, double stars2) {
         if(stars1>stars2)
             System.out.println("In competition between "+jumperName1+" and "+jumperName2+" higher should be "+jumperName1);
         else if (stars2>stars1)
@@ -47,9 +47,9 @@ public class SkiJumping {
     /**
      * wyswietlanie statystyk odnosnie wybranego zawodnika
      */
-    public void showStatistics() {
-        int stars = 250-this.lastPlace-this.lastPlace2-this.lastPlace3-this.lastPlace4-this.lastPlace5;
-        int maxStars = 250;
+    public void showSkiJumpingStatistics() {
+        double stars = 250-this.lastPlace-this.lastPlace2-this.lastPlace3-this.lastPlace4-this.lastPlace5;
+        double maxStars = 250;
         System.out.println("You chose "+this.jumperName+" whose last places were: "+lastPlace+", "+lastPlace2+", "+lastPlace3+", "+lastPlace4+", "+lastPlace5);
         System.out.println("In our rating he have "+stars+"/"+maxStars+" stars");
         System.out.println(" ");
@@ -58,7 +58,7 @@ public class SkiJumping {
     /**
      * @return wspolczynnik gwiazdek do wybrania lepszego zawodnika
      */
-    public double stars() {
+    public double skiJumpingStars() {
         double stars = 250-this.lastPlace-this.lastPlace2-this.lastPlace3-this.lastPlace4-this.lastPlace5;
         double maxStars = 250;
         double starsFactor = stars/maxStars;
