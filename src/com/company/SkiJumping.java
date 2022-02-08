@@ -60,7 +60,7 @@ public class SkiJumping {
      */
     public double skiJumpingStars() {
         double stars = 250-this.lastPlace-this.lastPlace2-this.lastPlace3-this.lastPlace4-this.lastPlace5;
-        double maxStars = 250;
+        double maxStars = 245;
         double starsFactor = stars/maxStars;
         return starsFactor;
     }

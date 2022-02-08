@@ -34,7 +34,7 @@ public class Football {
      * @param teamName2 - nazwa drugiej pobieranej druzyny
      * @param stars2 - ilosc gwiazdek drugiej pobieranej druzyny
      */
-    public static void footballResult(String teamName1, int stars1, String teamName2, int stars2) {
+    public static void footballResult(String teamName1, double stars1, String teamName2, double stars2) {
         if(stars1>stars2)
             System.out.println("The game between "+teamName1+" and "+teamName2+" should be won by "+teamName1);
         else if (stars2>stars1)

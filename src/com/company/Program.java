@@ -18,7 +18,6 @@ public class Program {
      */
     public static void main(String[] args)  {
             int sport;
-            String exit;
             System.out.println("Sports:");
             System.out.println("1. Football");
             System.out.println("2. Basketball");
@@ -64,9 +63,9 @@ public class Program {
                                 System.out.println(i / 7 + " - " + teamName);
                         }
                     }
-                    System.out.print("Choose team 1: ");
                     int team1, team2;
                     double stars1, stars2;
+                    System.out.print("Choose team 1: ");
                     String teamName1, teamName2;
                     team1 = scanner.nextInt();
                     teams.get(team1).showFootballStatistics();

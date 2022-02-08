@@ -55,7 +55,7 @@ public class Tennis {
      */
     public double tennisStars() {
         double stars = this.wins*5-this.losses*3+this.tournamentWon*50;
-        double maxStars = (this.losses+this.tournamentWon)*50;
+        double maxStars = (this.losses+this.tournamentWon)*50+this.wins*5;
         double starsFactor = stars/maxStars;
         return starsFactor;
     }
